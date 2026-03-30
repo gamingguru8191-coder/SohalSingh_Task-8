@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  padding: 0 5vw;
+  background: #fdfdfd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #34495e;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user {
+  color: #0e92eb;
+  background: #e3f2fd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Style the hamburger icon (label) - Hidden by default (Desktop) */
+.hamburger-icon-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: #333;
+}
+
+.hamburger-icon-close {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1002;
+}
+
+/* Menu items container - Standard flex on desktop */
+.menu-items {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  flex: 1;
+  justify-content: center;
+}
+
+.menu-items li a {
+  text-decoration: none;
+  color: #7f8c8d;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu-items li a:hover {
+  color: #18a1fcd4;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  height: 90vh;
+  padding: 27px 10px 152px 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-content {
+  width: 40%;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.hero-content span {
+  color: #32a4f0;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #32a4f0;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 50px;
+}
+
+.btn:hover {
+  background: red;
+  cursor: pointer;
+  /* transition: 1s all ease; */
+}
+
+.hero-img {
+  width: 50%;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  .menu-items {
+    display: none; /* Hide horizontal menu */
+  }
+
+  .hamburger-icon-toggle {
+    display: block; /* Show hamburger toggle */
+  }
+
+  /* Right-side sidebar logic moved down to unified mobile section */
+
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    height: auto;
+    padding: 10px 68px 40px 20px;
+  }
+
+  .user {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+
+  .hero-content {
+    width: 50%;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  .hero-img {
+    width: 50%;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn {
+    padding: 15px 30px;
+    font-size: 15px;
+    border-radius: 15px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .hamburger-icon-toggle {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .nav-right .user {
+    display: block; /* Ensure user pill is visible but maybe style it relative to icons */
+    margin-right: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    height: auto;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-img {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  /* Hamburger Menu Sidebar Logic */
+  .menu-items {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden off-screen */
+    width: 60%;
+    height: 100vh;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1001;
+  }
+
+  .menu-items li {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .menu-items li a {
+    color: white;
+    font-size: 20px;
+  }
+
+  /* Toggle the sidebar */
+  #menu-toggle:checked ~ .menu-items {
+    right: 0;
+  }
+
+  /* Show close icon when menu is open */
+  #menu-toggle:checked ~ .nav-right .hamburger-icon-close {
+    display: block;
+  }
+
+  /* Hide entry hamburger menu icon when open */
+  #menu-toggle:checked ~ .nav-right .hamburger-icon-toggle {
+    display: none;
+  }
+}
