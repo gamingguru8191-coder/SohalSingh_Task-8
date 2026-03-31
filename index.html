@@ -10,39 +10,38 @@
 </head>
 
 <body>
+    <!-- NAVBAR -->
     <nav>
         <div class="logo">Logo</div>
-        
-        <!-- Checkbox Hack -->
-        <input type="checkbox" id="menu-toggle" style="display: none;">
-
-        <ul class="menu-items">
+        <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
-
         <div class="nav-right">
             <div class="user">Username</div>
-            
-            <!-- Hamburger Icons -->
-            <label for="menu-toggle" class="hamburger-icon-toggle">&#9776;</label>
-            <label for="menu-toggle" class="hamburger-icon-close">&#10005;</label>
+            <button class="menu-btn">
+                &#9776;
+                <div class="mobile-menu">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </button>
         </div>
     </nav>
-
     <!-- HERO SECTION -->
     <main class="hero">
         <div class="hero-content">
             <h1>Revitalize Your Clothes with Expert <span>Laundry Services!</span></h1>
             <p>
-                From premium dry cleaning to swift wash and fold, we deliver care and convenience.
-                Schedule a pickup and rediscover the freshness of your clothes today!
+                From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and
+                rediscover the freshness of your clothes today!
             </p>
             <button class="btn">Book a service today!</button>
         </div>
-
         <div class="hero-img">
             <img src="machine.jpg" alt="Laundry Machine">
         </div>
